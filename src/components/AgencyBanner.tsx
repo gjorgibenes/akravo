@@ -53,12 +53,13 @@ export default function AgencyBanner() {
               fontFamily: "'Instrument Serif', serif",
               fontWeight: 400,
               color: "#fbfafc",
-              fontSize: 120,
+              fontSize: 100,
               lineHeight: "1.1em",
               letterSpacing: "-0.02em",
             }}
           >
-            LLM Optimisation Agency
+            LLM Optimisation{" "}
+            <span style={{ color: "rgba(255, 255, 255, 0.45)" }}>Agency</span>
           </p>
         </div>
       </div>
