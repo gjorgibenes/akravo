@@ -92,18 +92,16 @@ export default function Services() {
   return (
     <section
       id="process"
-      className="w-full"
+      className="w-full pt-16 px-6 md:px-16"
       style={{
-        padding: "64px 64px 0px 64px",
         background: "rgb(10, 10, 10)",
       }}
     >
       <div
-        className="max-w-[1200px] mx-auto overflow-visible"
+        className="max-w-[1200px] mx-auto overflow-visible py-16 px-6 md:px-12"
         style={{
           borderRadius: 50,
           borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-          padding: "64px 48px",
         }}
       >
         <div
@@ -119,7 +117,7 @@ export default function Services() {
               style={{
                 fontFamily: "Satoshi, sans-serif",
                 fontWeight: 500,
-                fontSize: 70,
+                fontSize: "var(--heading-section)",
                 letterSpacing: "-0.05em",
                 color: "#fbfafc",
               }}
@@ -140,7 +138,7 @@ export default function Services() {
                 color: "#999",
                 fontFamily: "Satoshi, sans-serif",
                 fontWeight: 500,
-                fontSize: 22,
+                fontSize: "var(--desc-services)",
                 lineHeight: "1.5em",
                 letterSpacing: "-0.02em",
                 textAlign: "center",
@@ -154,7 +152,7 @@ export default function Services() {
 
           <div
             className="grid grid-cols-1 md:grid-cols-3 w-full"
-            style={{ gap: "0px 20px" }}
+            style={{ gap: "24px 20px" }}
           >
             {services.map((service, i) => (
               <motion.div

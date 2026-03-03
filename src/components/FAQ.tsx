@@ -41,9 +41,8 @@ export default function FAQ() {
 
   return (
     <section
-      className="w-full"
+      className="w-full pt-15 px-6 md:px-15"
       style={{
-        padding: "60px 60px 0px 60px",
         background: "rgb(10, 10, 10)",
         zIndex: 1,
         position: "relative",

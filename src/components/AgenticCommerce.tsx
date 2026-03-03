@@ -9,25 +9,23 @@ const CAL_LINK = "https://cal.com/fabianvantil/akravo-discovery";
 export default function AgenticCommerce() {
   return (
     <section
-      className="w-full"
+      className="w-full py-16 px-6 md:px-16"
       style={{
-        padding: "64px",
         background: "rgb(10, 10, 10)",
         zIndex: 1,
       }}
     >
       <div
-        className="max-w-[1000px] mx-auto overflow-hidden"
+        className="max-w-[1000px] mx-auto overflow-hidden h-auto md:h-[443px]"
         style={{
           background: "rgb(13, 13, 13)",
           borderRadius: 24,
           borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-          height: 443,
         }}
       >
         <div
-          className="relative flex items-center h-full"
-          style={{ padding: "64px 48px", gap: 24 }}
+          className="relative flex items-center h-full py-16 px-6 md:px-12"
+          style={{ gap: 24 }}
         >
           {/* Text */}
           <motion.div
@@ -80,7 +78,7 @@ export default function AgenticCommerce() {
               </p>
             </div>
 
-            <div className="flex flex-wrap" style={{ gap: 12 }}>
+            <div className="flex flex-col md:flex-row md:flex-wrap" style={{ gap: 12 }}>
               <Button href="/#contact" variant="primary" size="medium" newTab>
                 Get Checklist
               </Button>

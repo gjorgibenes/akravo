@@ -25,8 +25,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 flex justify-center"
-      style={{ padding: "24px 64px" }}
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center py-4 md:py-6 px-6 md:px-16"
     >
       <nav
         className="flex items-center justify-center w-fit transition-all duration-300"

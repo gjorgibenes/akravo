@@ -49,3 +49,40 @@ html {
 input, textarea {
   font-family: "Satoshi", sans-serif;
 }
+
+/* Responsive custom properties — only for values that change on mobile */
+:root {
+  --heading-hero: 90px;
+  --desc-hero: 28px;
+  --heading-banner: 100px;
+  --desc-services: 22px;
+  --desc-contact: 20px;
+  --heading-footer: 100px;
+  --marquee-height: 90px;
+  --marquee-gap: 96px;
+  --marquee-label: 34px;
+  --btn-lg-py: 24px;
+  --btn-lg-px: 48px;
+  --btn-lg-font: 21px;
+  --contact-radius: 96px;
+  --heading-section: 70px;
+}
+
+@media (max-width: 809px) {
+  :root {
+    --heading-hero: 42px;
+    --desc-hero: 16px;
+    --heading-banner: 89px;
+    --desc-services: 16px;
+    --desc-contact: 16px;
+    --heading-footer: 46px;
+    --marquee-height: 50px;
+    --marquee-gap: 40px;
+    --marquee-label: 18px;
+    --btn-lg-py: 16px;
+    --btn-lg-px: 28px;
+    --btn-lg-font: 16px;
+    --contact-radius: 48px;
+    --heading-section: 46px;
+  }
+}

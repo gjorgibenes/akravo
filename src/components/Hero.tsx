@@ -9,9 +9,8 @@ const CAL_LINK = "https://cal.com/fabianvantil/akravo-discovery";
 export default function Hero() {
   return (
     <section
-      className="relative w-full flex flex-col items-center justify-center text-center overflow-visible"
+      className="relative w-full flex flex-col items-center justify-center text-center overflow-visible pt-24 md:pt-[140px] px-6 md:px-16 pb-16"
       style={{
-        padding: "140px 64px 64px 64px",
         background: "rgb(10, 10, 10)",
       }}
     >
@@ -28,7 +27,7 @@ export default function Hero() {
           style={{
             fontFamily: "Satoshi, sans-serif",
             fontWeight: 500,
-            fontSize: 90,
+            fontSize: "var(--heading-hero)",
             lineHeight: "1.1em",
             letterSpacing: "-0.05em",
             color: "#fbfafc",
@@ -54,7 +53,7 @@ export default function Hero() {
             color: "#999",
             fontFamily: "Satoshi, sans-serif",
             fontWeight: 500,
-            fontSize: 28,
+            fontSize: "var(--desc-hero)",
             lineHeight: "1.5em",
             letterSpacing: "-0.02em",
             textAlign: "center",
@@ -66,8 +65,7 @@ export default function Hero() {
         </p>
 
         <div
-          className="flex flex-wrap items-center justify-center"
-          style={{ gap: 24 }}
+          className="flex flex-row flex-wrap items-center justify-center gap-4 md:gap-6"
         >
           <Button href={CAL_LINK} variant="primary" size="large">
             Book a call

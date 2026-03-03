@@ -19,7 +19,7 @@ function GeminiSparkle() {
 const labelStyle: React.CSSProperties = {
   fontFamily: "Satoshi, sans-serif",
   fontWeight: 500,
-  fontSize: 34,
+  fontSize: "var(--marquee-label)",
   letterSpacing: "-0.02em",
   color: "rgb(255, 255, 255)",
   lineHeight: 1,
@@ -47,14 +47,13 @@ export default function LogoMarquee() {
 
   return (
     <div
-      className="w-full overflow-hidden relative"
+      className="w-full overflow-hidden relative px-6 md:px-16 pb-0 md:pb-16"
       style={{
-        padding: "0px 64px 64px 64px",
         background: "rgb(10, 10, 10)",
       }}
     >
       <div className="max-w-[1200px] mx-auto">
-        <div className="relative overflow-hidden" style={{ height: 90 }}>
+        <div className="relative overflow-hidden" style={{ height: "var(--marquee-height)" }}>
           {/* Fade mask — 25% on each side, matching Framer */}
           <div
             className="absolute inset-0 z-10 pointer-events-none"
@@ -68,7 +67,7 @@ export default function LogoMarquee() {
 
           <motion.div
             className="flex items-center whitespace-nowrap absolute top-0 bottom-0"
-            style={{ gap: 96 }}
+            style={{ gap: "var(--marquee-gap)" }}
             animate={{ x: ["0%", "-50%"] }}
             transition={{
               x: {
@@ -84,7 +83,7 @@ export default function LogoMarquee() {
                 key={i}
                 className="shrink-0 flex items-center justify-center"
                 style={{
-                  height: 90,
+                  height: "var(--marquee-height)",
                   gap: logo.sparkle ? 16 : logo.label ? 14 : 0,
                 }}
               >
@@ -94,7 +93,7 @@ export default function LogoMarquee() {
                   alt={logo.name}
                   width={logo.width}
                   height={logo.height}
-                  style={{ objectFit: "contain" }}
+                  style={{ objectFit: "contain", maxHeight: "100%", width: "auto" }}
                 />
                 {logo.label && (
                   <span style={labelStyle}>{logo.label}</span>

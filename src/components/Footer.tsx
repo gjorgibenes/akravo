@@ -36,12 +36,12 @@ export default function Footer() {
 
         {/* Content */}
         <div
-          className="relative flex flex-col items-center justify-center text-center w-full h-full"
-          style={{ padding: 64, zIndex: 1 }}
+          className="relative flex flex-col items-center justify-center text-center w-full h-full p-6 md:p-16"
+          style={{ zIndex: 1 }}
         >
           <div
             className="max-w-[1200px] mx-auto flex flex-col items-center justify-center flex-1"
-            style={{ gap: 32, paddingTop: 100 }}
+            style={{ gap: 32, paddingTop: 40 }}
           >
             <Badge green>Accepting 3 new clients for Q4</Badge>
 
@@ -49,7 +49,7 @@ export default function Footer() {
               style={{
                 fontFamily: "Satoshi, sans-serif",
                 fontWeight: 500,
-                fontSize: 100,
+                fontSize: "var(--heading-footer)",
                 lineHeight: "0.9em",
                 letterSpacing: "-0.05em",
                 color: "#fbfafc",
@@ -75,7 +75,6 @@ export default function Footer() {
                 fontSize: 16,
                 lineHeight: "1.5em",
                 letterSpacing: "-0.02em",
-                width: "70%",
                 maxWidth: 600,
               }}
             >
@@ -90,14 +89,13 @@ export default function Footer() {
 
           {/* Copyright bar */}
           <div
-            className="w-full"
+            className="w-full py-8 px-6 md:px-16"
             style={{
-              padding: "32px 64px",
               zIndex: 1,
             }}
           >
             <div
-              className="max-w-[1200px] mx-auto flex items-center justify-between"
+              className="max-w-[1200px] mx-auto flex flex-col md:flex-row flex-wrap items-center justify-between gap-4"
             >
               <span
                 style={{

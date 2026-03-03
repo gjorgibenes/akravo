@@ -12,10 +12,10 @@ interface ButtonProps {
   newTab?: boolean;
 }
 
-const sizeStyles = {
+const sizeStyles: Record<string, { padding: string; fontSize: string | number }> = {
   small: { padding: "9px 13px", fontSize: 14 },
   medium: { padding: "12px 18px", fontSize: 14 },
-  large: { padding: "24px 48px", fontSize: 21 },
+  large: { padding: "var(--btn-lg-py) var(--btn-lg-px)", fontSize: "var(--btn-lg-font)" },
 };
 
 export default function Button({

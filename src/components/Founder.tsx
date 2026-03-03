@@ -6,9 +6,8 @@ import { motion } from "framer-motion";
 export default function Founder() {
   return (
     <section
-      className="w-full"
+      className="w-full py-16 px-6 md:px-16"
       style={{
-        padding: "64px",
         background: "rgb(10, 10, 10)",
       }}
     >
@@ -21,9 +20,28 @@ export default function Founder() {
           minHeight: 400,
         }}
       >
+        {/* Mobile photo — full width at top of card */}
+        <div className="relative w-full lg:hidden" style={{ height: 300 }}>
+          <Image
+            src="/images/fabian.png"
+            alt="Fabian van Til — Founder of Akravo"
+            fill
+            style={{
+              objectFit: "cover",
+              objectPosition: "center top",
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent 50%, rgb(13, 13, 13) 100%)",
+            }}
+          />
+        </div>
+
         <div
-          className="flex flex-col lg:flex-row items-start relative"
-          style={{ padding: "64px 48px" }}
+          className="flex flex-col lg:flex-row items-start relative py-8 lg:py-16 px-6 md:px-12"
         >
           {/* Text */}
           <motion.div

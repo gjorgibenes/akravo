@@ -7,18 +7,13 @@ export default function AgencyBanner() {
   return (
     <section
       id="llm-optimisation-agency"
-      className="w-full"
+      className="w-full p-6 md:pt-0 md:px-16 md:pb-16"
       style={{
-        padding: "0px 64px 64px 64px",
         background: "rgb(10, 10, 10)",
       }}
     >
       <div
-        className="max-w-[1200px] mx-auto overflow-hidden relative flex items-center justify-center"
-        style={{
-          borderRadius: 48,
-          height: 603,
-        }}
+        className="max-w-[1200px] mx-auto overflow-hidden relative flex items-center justify-center h-auto md:h-[603px] py-16 md:py-0 rounded-3xl md:rounded-[48px]"
       >
         {/* Background Video */}
         <video
@@ -46,6 +41,7 @@ export default function AgencyBanner() {
               alt="akravo."
               width={137}
               height={47}
+              className="w-[90px] md:w-[137px] h-auto"
             />
           </Link>
           <p
@@ -53,7 +49,7 @@ export default function AgencyBanner() {
               fontFamily: "'Instrument Serif', serif",
               fontWeight: 400,
               color: "#fbfafc",
-              fontSize: 100,
+              fontSize: "var(--heading-banner)",
               lineHeight: "1.1em",
               letterSpacing: "-0.02em",
             }}

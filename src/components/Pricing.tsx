@@ -46,9 +46,8 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="w-full"
+      className="w-full py-16 px-6 md:px-16"
       style={{
-        padding: "64px",
         background: "rgb(10, 10, 10)",
       }}
     >
@@ -96,7 +95,7 @@ export default function Pricing() {
                   color: "#999",
                   fontFamily: "Satoshi, sans-serif",
                   fontWeight: 500,
-                  fontSize: 22,
+                  fontSize: "var(--desc-services)",
                   lineHeight: "1.5em",
                   letterSpacing: "-0.02em",
                   textAlign: "center",
@@ -119,13 +118,11 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: [0.44, 0, 0.56, 1] }}
-              className="relative flex flex-col overflow-hidden w-full"
+              className="relative flex flex-col overflow-hidden w-full max-w-none lg:max-w-[450px] py-10 md:py-16 px-6 md:px-8"
               style={{
-                maxWidth: 450,
                 background: "rgb(13, 13, 13)",
                 borderRadius: 24,
                 borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-                padding: "64px 32px",
               }}
             >
               {/* Video background glow */}
@@ -220,7 +217,7 @@ export default function Pricing() {
                   className="flex flex-col items-center"
                   style={{ gap: 24 }}
                 >
-                  <div className="flex w-full" style={{ gap: 16 }}>
+                  <div className="flex flex-col md:flex-row w-full" style={{ gap: 16 }}>
                     <Button
                       href={CAL_LINK}
                       variant="primary"
@@ -326,13 +323,11 @@ export default function Pricing() {
                 delay: 0.1,
                 ease: [0.44, 0, 0.56, 1],
               }}
-              className="relative flex flex-col overflow-hidden w-full"
+              className="relative flex flex-col overflow-hidden w-full max-w-none lg:max-w-[450px] py-10 px-6 md:px-8"
               style={{
-                maxWidth: 450,
                 background: "rgb(3, 3, 3)",
                 borderRadius: 24,
                 borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-                padding: "40px 32px",
               }}
             >
               {/* Video background glow */}

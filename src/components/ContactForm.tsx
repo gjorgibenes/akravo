@@ -69,11 +69,10 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="w-full"
+      className="w-full pt-[75px] px-6 md:px-15 pb-10 md:pb-15"
       style={{
-        padding: "75px 60px 60px 60px",
         background: "rgb(10, 10, 10)",
-        borderRadius: "0px 0px 96px 96px",
+        borderRadius: "0px 0px var(--contact-radius) var(--contact-radius)",
         zIndex: 1,
         position: "relative",
       }}
@@ -91,7 +90,7 @@ export default function ContactForm() {
             style={{
               fontFamily: "Satoshi, sans-serif",
               fontWeight: 500,
-              fontSize: 70,
+              fontSize: "var(--heading-section)",
               lineHeight: "1.1em",
               letterSpacing: "-0.05em",
               color: "#fbfafc",
@@ -114,7 +113,7 @@ export default function ContactForm() {
               color: "#999",
               fontFamily: "Satoshi, sans-serif",
               fontWeight: 500,
-              fontSize: 20,
+              fontSize: "var(--desc-contact)",
               lineHeight: "1.5em",
               letterSpacing: "-0.02em",
               maxWidth: 628,
