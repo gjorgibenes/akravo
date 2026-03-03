@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { supabase } from "@/lib/supabase";
 import Button from "./Button";
 
 export default function ContactForm() {
@@ -13,6 +14,8 @@ export default function ContactForm() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const labelStyle: React.CSSProperties = {
     fontFamily: "Satoshi, sans-serif",
@@ -42,6 +45,24 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const { error } = await supabase.from("contacts").insert({
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      email: formData.email,
+      website: formData.website,
+      message: formData.message,
+    });
+
+    setLoading(false);
+
+    if (error) {
+      setError("Something went wrong. Please try again.");
+      return;
+    }
+
     setSubmitted(true);
   };
 
@@ -243,8 +264,13 @@ export default function ContactForm() {
                 }
               />
             </div>
+            {error && (
+              <p style={{ color: "#ef4444", fontFamily: "Satoshi, sans-serif", fontSize: 14 }}>
+                {error}
+              </p>
+            )}
             <Button type="submit" variant="primary" size="large" fullWidth>
-              Get in Touch
+              {loading ? "Sending..." : "Get in Touch"}
             </Button>
           </form>
         )}
