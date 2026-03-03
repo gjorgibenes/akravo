@@ -1,13 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 function GeminiSparkle() {
   return (
     <svg
-      width="40"
-      height="40"
+      width="24"
+      height="24"
       viewBox="0 0 29 29"
       fill="rgb(255, 255, 255)"
     >
@@ -16,30 +15,18 @@ function GeminiSparkle() {
   );
 }
 
-const labelStyle: React.CSSProperties = {
-  fontFamily: "Satoshi, sans-serif",
-  fontWeight: 500,
-  fontSize: "var(--marquee-label)",
-  letterSpacing: "-0.02em",
-  color: "rgb(255, 255, 255)",
-  lineHeight: 1,
-};
-
 const logos: {
   name: string;
   src: string;
-  width: number;
-  height: number;
   sparkle?: boolean;
-  label?: string;
 }[] = [
-  { name: "OpenAI", src: "/images/logo_OpenAI.svg", width: 250, height: 67 },
-  { name: "Gemini", src: "/images/logo_Gemini.svg", width: 210, height: 54, sparkle: true },
-  { name: "Meta AI", src: "/images/logo_Meta_AI_Icon.svg", width: 70, height: 48, label: "Meta AI" },
-  { name: "Perplexity", src: "/images/logo_Perplexity.svg", width: 256, height: 68 },
-  { name: "Qwen", src: "/images/logo_QWEN.svg", width: 250, height: 72 },
-  { name: "Mistral", src: "/images/logo_Mistral.svg", width: 56, height: 52, label: "Mistral" },
-  { name: "Claude", src: "/images/logo_Claude.svg", width: 336, height: 72 },
+  { name: "OpenAI", src: "/images/logo_OpenAI.svg" },
+  { name: "Gemini", src: "/images/logo_Gemini.svg", sparkle: true },
+  { name: "Meta AI", src: "/images/logo_Meta_AI_Icon.svg" },
+  { name: "Perplexity", src: "/images/logo_Perplexity.svg" },
+  { name: "Qwen", src: "/images/logo_QWEN.svg" },
+  { name: "Mistral", src: "/images/logo_Mistral.svg" },
+  { name: "Claude", src: "/images/logo_Claude.svg" },
 ];
 
 export default function LogoMarquee() {
@@ -84,20 +71,20 @@ export default function LogoMarquee() {
                 className="shrink-0 flex items-center justify-center"
                 style={{
                   height: "var(--marquee-height)",
-                  gap: logo.sparkle ? 16 : logo.label ? 14 : 0,
+                  gap: logo.sparkle ? 10 : 0,
                 }}
               >
                 {logo.sparkle && <GeminiSparkle />}
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={logo.src}
                   alt={logo.name}
-                  width={logo.width}
-                  height={logo.height}
-                  style={{ objectFit: "contain", maxHeight: "100%", width: "auto" }}
+                  style={{
+                    height: "50%",
+                    width: "auto",
+                    objectFit: "contain",
+                  }}
                 />
-                {logo.label && (
-                  <span style={labelStyle}>{logo.label}</span>
-                )}
               </div>
             ))}
           </motion.div>
