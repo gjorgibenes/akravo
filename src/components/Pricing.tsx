@@ -362,19 +362,19 @@ export default function Pricing() {
                 className="relative z-[1] flex flex-col"
                 style={{ gap: 40 }}
               >
-                {/* Price */}
+                {/* Top */}
                 <div className="flex flex-col" style={{ gap: 12 }}>
                   <span
                     style={{
                       fontFamily: "Satoshi, sans-serif",
                       fontWeight: 500,
-                      fontSize: 48,
-                      lineHeight: "1.2",
-                      letterSpacing: "-0.2px",
+                      fontSize: 18,
+                      lineHeight: "1.5em",
+                      letterSpacing: "-0.02em",
                       color: "#fbfafc",
                     }}
                   >
-                    $8,000+
+                    For Enterprises
                   </span>
                   <span
                     style={{
@@ -386,21 +386,63 @@ export default function Pricing() {
                       color: "#999",
                     }}
                   >
-                    For Enterprises
+                    3 Month-Project. Pricing may be adjusted to suit your
+                    business&apos; needs. Excluding Link Budgets.
                   </span>
+                  <div className="flex flex-col">
+                    <span
+                      style={{
+                        fontFamily: "Satoshi, sans-serif",
+                        fontWeight: 500,
+                        fontSize: 16,
+                        lineHeight: "1.5em",
+                        letterSpacing: "-0.02em",
+                        color: "#999",
+                      }}
+                    >
+                      Starting at
+                    </span>
+                    <div
+                      className="flex items-baseline"
+                      style={{ gap: 4 }}
+                    >
+                      <span
+                        style={{
+                          fontFamily: "Satoshi, sans-serif",
+                          fontWeight: 500,
+                          fontSize: 48,
+                          lineHeight: "1.2",
+                          letterSpacing: "-0.2px",
+                          color: "#fbfafc",
+                        }}
+                      >
+                        $8,000
+                      </span>
+                      <span
+                        style={{
+                          fontFamily: "Satoshi, sans-serif",
+                          fontWeight: 500,
+                          fontSize: 24,
+                          lineHeight: "1.2",
+                          color: "#999",
+                        }}
+                      >
+                        +
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Button — auto-width, centered */}
-                <div className="flex justify-center">
-                  <Button
-                    href={CAL_LINK}
-                    variant="primary"
-                    size="large"
-                    newTab
-                  >
-                    Let&apos;s Talk
-                  </Button>
-                </div>
+                {/* Button */}
+                <Button
+                  href={CAL_LINK}
+                  variant="primary"
+                  size="large"
+                  fullWidth
+                  newTab
+                >
+                  Let&apos;s Talk
+                </Button>
 
                 {/* Features */}
                 <div className="flex flex-col" style={{ gap: 16 }}>
