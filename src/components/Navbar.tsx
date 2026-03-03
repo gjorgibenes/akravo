@@ -36,47 +36,43 @@ export default function Navbar() {
           WebkitBackdropFilter: "blur(20px)",
           border: "1px solid rgba(255, 255, 255, 0.1)",
           borderRadius: 999,
-          padding: "12px 24px",
-          gap: 16,
+          padding: "10px 10px 10px 10px",
+          gap: 40,
         }}
       >
         {/* Logo + Links */}
-        <div className="flex items-center" style={{ gap: 60 }}>
+        <div className="flex items-center" style={{ gap: 40 }}>
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/images/akravo-logo.svg"
               alt="akravo."
-              width={63}
-              height={22}
+              width={100}
+              height={35}
               priority
+              style={{ borderRadius: 8 }}
             />
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center" style={{ gap: 10 }}>
+          <div className="hidden md:flex items-center" style={{ gap: 32 }}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className="transition-colors duration-200 flex items-center"
                 style={{
-                  color: "#999",
+                  color: "#fbfafc",
                   fontFamily: "Satoshi, sans-serif",
                   fontWeight: 500,
-                  fontSize: 14,
+                  fontSize: 16,
                   letterSpacing: "-0.02em",
-                  padding: "8px 9px",
-                  borderRadius: 8,
-                  background: "rgba(255, 255, 255, 0)",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "#fbfafc";
-                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.1)";
+                  e.currentTarget.style.opacity = "0.7";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "#999";
-                  e.currentTarget.style.background = "rgba(255, 255, 255, 0)";
+                  e.currentTarget.style.opacity = "1";
                 }}
               >
                 {link.label}
@@ -86,18 +82,19 @@ export default function Navbar() {
         </div>
 
         {/* Desktop CTAs */}
-        <div className="hidden md:flex items-center" style={{ gap: 10 }}>
+        <div className="hidden md:flex items-center" style={{ gap: 8 }}>
           <Link
             href="/#contact"
             className="rounded-full transition-all duration-200"
             style={{
               color: "#fbfafc",
-              background: "rgba(13, 13, 13, 0.5)",
+              background: "transparent",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
               fontFamily: "Satoshi, sans-serif",
               fontWeight: 500,
-              fontSize: 14,
+              fontSize: 16,
               letterSpacing: "-0.02em",
-              padding: "9px 13px",
+              padding: "10px 20px",
               borderRadius: 999,
             }}
           >
@@ -110,9 +107,9 @@ export default function Navbar() {
               background: "rgb(98, 20, 217)",
               fontFamily: "Satoshi, sans-serif",
               fontWeight: 500,
-              fontSize: 14,
+              fontSize: 16,
               letterSpacing: "-0.02em",
-              padding: "9px 13px",
+              padding: "10px 20px",
               borderRadius: 999,
             }}
           >
