@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import SchemaOrg from "@/components/SchemaOrg";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-instrument-serif",
   display: "swap",
 });
 
@@ -37,6 +45,7 @@ export const metadata: Metadata = {
     siteName: "Akravo",
     locale: "en_US",
     type: "website",
+    images: [{ url: "/images/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
@@ -160,31 +169,87 @@ const faqSchema = {
   ],
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Fabian van Til",
+  jobTitle: "Founder",
+  worksFor: {
+    "@type": "Organization",
+    name: "Akravo",
+  },
+  url: "https://akravo.com",
+  knowsAbout: [
+    "LLM Optimisation",
+    "AI Search Visibility",
+    "Generative Engine Optimisation",
+    "ChatGPT SEO",
+  ],
+};
+
+const serviceSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Prompt Research",
+    provider: { "@type": "Organization", name: "Akravo" },
+    description:
+      "We map your intent taxonomy and identify entity gaps to understand how AI platforms perceive your brand.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Citation Management",
+    provider: { "@type": "Organization", name: "Akravo" },
+    description:
+      "We build and maintain your citation graph, ensuring your brand is referenced across trusted sources that LLMs rely on.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Influencial Monetisation",
+    provider: { "@type": "Organization", name: "Akravo" },
+    description:
+      "We monitor your answer share and citation share across AI platforms and catch hallucinations.",
+  },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${instrumentSerif.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://api.fontshare.com" />
         <link
           rel="preconnect"
-          href="https://fonts.gstatic.com"
+          href="https://api.fontshare.com"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://cdn.fontshare.com" />
+        <link
+          rel="preconnect"
+          href="https://cdn.fontshare.com"
           crossOrigin="anonymous"
         />
         <link
           href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,400i,500i,700i&display=swap"
           rel="stylesheet"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <SchemaOrg schema={organizationSchema} />
         <SchemaOrg schema={websiteSchema} />
         <SchemaOrg schema={faqSchema} />
+        <SchemaOrg schema={personSchema} />
+        {serviceSchemas.map((schema, i) => (
+          <SchemaOrg key={i} schema={schema} />
+        ))}
       </head>
       <body>{children}</body>
     </html>

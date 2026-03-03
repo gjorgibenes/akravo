@@ -66,7 +66,7 @@ export default function Founder() {
                 Aim, shoot,{" "}
                 <span
                   style={{
-                    fontFamily: "'Instrument Serif', serif",
+                    fontFamily: "var(--font-serif)",
                     fontStyle: "italic",
                     fontWeight: 400,
                   }}

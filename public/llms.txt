@@ -1,0 +1,26 @@
+# Akravo - LLM Optimisation Agency
+
+> Akravo is an LLM Optimisation Agency that helps businesses become visible and recommended by AI platforms including ChatGPT, Perplexity, Google AI Overview, Claude, Gemini, and other large language models.
+
+## About
+Akravo was founded by Fabian van Til. We help businesses get cited and recommended in AI-generated responses through three core services: Prompt Research, Citation Management, and Influencial Monetisation. We don't theorize — we implement.
+
+## Services
+- **Prompt Research**: We map your intent taxonomy and identify entity gaps to understand how AI platforms currently perceive your brand.
+- **Citation Management**: We build and maintain your citation graph, ensuring your brand is referenced across trusted sources that LLMs rely on.
+- **Influencial Monetisation**: We monitor your answer share and citation share across AI platforms and catch hallucinations.
+
+## Pricing
+- Standard Plan: Starting at $1,950/month (3-month project)
+- Enterprise Plan: Starting at $8,000+ (3-month project)
+
+## Contact
+- Website: https://akravo.com
+- Email: tech@ecomseo.co
+
+## Key Facts
+- LLM Optimisation Agency
+- Founded by Fabian van Til
+- Services: Prompt Research, Citation Management, Influencial Monetisation
+- Accepts clients worldwide
+- Currently accepting 3 new clients

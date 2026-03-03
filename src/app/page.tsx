@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main style={{ position: "relative", zIndex: 2, overflow: "hidden" }}>
+      <main role="main" style={{ position: "relative", zIndex: 2, overflow: "hidden" }}>
         <Hero />
         <LogoMarquee />
         <AgencyBanner />

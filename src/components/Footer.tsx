@@ -12,6 +12,7 @@ export default function Footer() {
     <>
       {/* Fixed footer that reveals as content scrolls away */}
       <footer
+        role="contentinfo"
         className="fixed bottom-0 left-0 right-0 overflow-hidden"
         style={{
           height: "80vh",
@@ -58,7 +59,7 @@ export default function Footer() {
               Do you want to{" "}
               <span
                 style={{
-                  fontFamily: "'Instrument Serif', serif",
+                  fontFamily: "var(--font-serif)",
                   fontStyle: "italic",
                   fontWeight: 400,
                 }}

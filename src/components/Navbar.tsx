@@ -25,9 +25,12 @@ export default function Navbar() {
 
   return (
     <header
+      role="banner"
       className="fixed top-0 left-0 right-0 z-50 flex justify-center py-4 md:py-6 px-6 md:px-16"
     >
       <nav
+        role="navigation"
+        aria-label="Main navigation"
         className="flex items-center justify-center w-fit transition-all duration-300"
         style={{
           background: "rgba(13, 13, 13, 0.5)",
@@ -120,7 +123,8 @@ export default function Navbar() {
         <button
           className="md:hidden p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
         >
           <svg
             width="24"

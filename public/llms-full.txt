@@ -1,0 +1,91 @@
+# Akravo - LLM Optimisation Agency (Full Documentation)
+
+> Akravo is an LLM Optimisation Agency that helps businesses become visible and recommended by AI platforms including ChatGPT, Perplexity, Google AI Overview, Claude, Gemini, and other large language models.
+
+## About Akravo
+Akravo was founded by Fabian van Til. The agency specializes in making businesses visible and citable in AI-generated responses. While others write blog posts about "AI SEO," Akravo is inside the API making it work. The edge: they don't theorize — they implement.
+
+ChatGPT just announced the future. Google SGE is already used more than standard Google Results. Every week a business waits, competitors build stronger AI authority that becomes exponentially harder to overcome.
+
+## Services in Detail
+
+### 1. Prompt Research
+We map your intent taxonomy and identify entity gaps to understand how AI platforms currently perceive your brand. This initial research phase establishes a baseline for how AI models reference (or fail to reference) your business, products, and expertise. We analyze the prompts and queries where your brand should appear and identify the gaps between current AI perception and your desired positioning.
+
+### 2. Citation Management
+We build and maintain your citation graph — the whole A-Z. This involves ensuring your brand is referenced across the trusted sources that large language models rely on during training and retrieval. Citation management includes creating and optimizing content across authoritative platforms, building entity relationships, and maintaining a consistent, accurate presence across the web that AI systems can verify and trust.
+
+### 3. Influencial Monetisation
+We monitor your answer share and citation share across AI platforms and catch hallucinations. This ongoing monitoring ensures that AI platforms accurately represent your brand, products, and services. We track how often your brand is cited in AI-generated responses, measure your share of voice compared to competitors, and identify and address any AI hallucinations or inaccuracies about your business.
+
+## Pricing
+
+### Standard Plan
+- Starting at $1,950/month
+- 3-month project duration
+- Pricing may be adjusted to suit your business' needs
+- Excluding Link Budgets
+- 10% discount available for upfront payment ($5,265 total)
+
+**Includes:**
+- Dedicated AI Strategist
+- Advanced entity mapping
+- Transparent Performance Dashboard
+- Competitive displacement tactics
+- Cross-platform citation monitoring
+- Technical implementation support
+- Direct Slack channel
+- Pause or cancel anytime
+
+### Enterprise Plan
+- Starting at $8,000+
+- 3-month project duration
+- Pricing may be adjusted to suit your business' needs
+- Excluding Link Budgets
+
+**Includes everything from Standard, plus:**
+- API access to citation data
+- Multi-domain optimization
+- Custom integration options
+- Unlimited brands
+- Invite unlimited users
+
+## Agentic Commerce
+AI Shopping is redefining eCommerce. Customers can now complete their checkout directly inside ChatGPT. Akravo offers a free 27-step checklist to help brands activate agentic commerce for their business.
+
+## Frequently Asked Questions
+
+### Is this just repackaged SEO?
+70% overlaps with SEO, but the 30% that's different makes all the difference. AI platforms need structured data, clear answers, and entity authority — not just keywords and backlinks.
+
+### Can you guarantee we'll appear in ChatGPT?
+We guarantee increased citations or full refund. ChatGPT doesn't "rank" sites — it synthesizes from trusted sources. We make you a trusted source.
+
+### How long until results?
+First citations within 30 days. Meaningful traffic by day 60. Compound growth after 90 days.
+
+### What exactly is LLM optimization?
+It's the process of making your content visible and citable in AI-powered search tools like ChatGPT, Perplexity, and Google's AI Overview. Think of it as SEO for AI — we ensure these platforms understand, trust, and recommend your business when users ask relevant questions.
+
+### Will this interfere with our regular SEO?
+No. In fact, 70% of AI optimization improves your traditional SEO too. Better structured data, clearer content, and improved entity recognition benefit both traditional and AI search. The only additions are AI-specific elements like llms.txt and answer-focused content formatting.
+
+### How do AI platforms decide what sources to trust?
+They evaluate domain authority, factual accuracy, content structure, and presence across multiple trusted sources (Wikipedia, major publications, etc.). If you're cited frequently in their training data or high-authority sites, you become a "trusted source." We systematically build these trust signals.
+
+## Company Philosophy
+Akravo's approach is summed up as: "Aim, shoot, score." The agency focuses on practical implementation over theory. ChatGPT, Perplexity, and Google's AI Overview control the new buyer journey — Akravo makes sure they recommend your business.
+
+## Contact
+- Website: https://akravo.com
+- Email: tech@ecomseo.co
+- Founder: Fabian van Til
+- Booking: https://cal.com/fabianvantil/akravo-discovery
+
+## Key Facts
+- LLM Optimisation Agency
+- Founded by Fabian van Til
+- Services: Prompt Research, Citation Management, Influencial Monetisation
+- Accepts clients worldwide
+- Currently accepting 3 new clients for Q4
+- AI platforms covered: ChatGPT, Perplexity, Google AI Overview, Claude, Gemini, Meta AI, Qwen, Mistral

@@ -125,7 +125,7 @@ export default function Services() {
               Simple,{" "}
               <span
                 style={{
-                  fontFamily: "'Instrument Serif', serif",
+                  fontFamily: "var(--font-serif)",
                   fontStyle: "italic",
                   fontWeight: 400,
                 }}

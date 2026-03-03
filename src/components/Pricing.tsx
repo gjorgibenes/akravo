@@ -82,7 +82,7 @@ export default function Pricing() {
                 Pricing that&apos;s{" "}
                 <span
                   style={{
-                    fontFamily: "'Instrument Serif', serif",
+                    fontFamily: "var(--font-serif)",
                     fontStyle: "italic",
                     fontWeight: 400,
                   }}
@@ -249,6 +249,9 @@ export default function Pricing() {
                   >
                     <button
                       onClick={() => setUpfront(!upfront)}
+                      aria-label={upfront ? "Switch to monthly payment" : "Switch to upfront payment"}
+                      role="switch"
+                      aria-checked={upfront}
                       className="relative shrink-0 cursor-pointer"
                       style={{
                         width: 60,

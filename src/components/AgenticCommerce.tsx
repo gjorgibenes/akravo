@@ -52,7 +52,7 @@ export default function AgenticCommerce() {
                 Get our{" "}
                 <span
                   style={{
-                    fontFamily: "'Instrument Serif', serif",
+                    fontFamily: "var(--font-serif)",
                     fontStyle: "italic",
                     fontWeight: 400,
                   }}

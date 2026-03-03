@@ -12,7 +12,7 @@
   --color-border: rgba(255, 255, 255, 0.1);
   --color-border-strong: #222;
   --font-sans: "Satoshi", sans-serif;
-  --font-serif: "Instrument Serif", serif;
+  --font-serif: var(--font-instrument-serif), serif;
   --font-inter: "Inter", sans-serif;
 }
 

@@ -62,6 +62,8 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-expanded={openIndex === i}
+                aria-controls={`faq-answer-${i}`}
                 className="w-full flex items-center justify-between text-left cursor-pointer"
                 style={{ padding: "18px 20px" }}
               >
@@ -114,6 +116,9 @@ export default function FAQ() {
               <AnimatePresence>
                 {openIndex === i && (
                   <motion.div
+                    id={`faq-answer-${i}`}
+                    role="region"
+                    aria-labelledby={`faq-question-${i}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}

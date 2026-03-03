@@ -38,7 +38,7 @@ export default function Hero() {
           Your Business is{" "}
           <span
             style={{
-              fontFamily: "'Instrument Serif', serif",
+              fontFamily: "var(--font-serif)",
               fontStyle: "italic",
               fontWeight: 400,
             }}

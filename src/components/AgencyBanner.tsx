@@ -46,7 +46,7 @@ export default function AgencyBanner() {
           </Link>
           <p
             style={{
-              fontFamily: "'Instrument Serif', serif",
+              fontFamily: "var(--font-serif)",
               fontWeight: 400,
               color: "#fbfafc",
               fontSize: "var(--heading-banner)",

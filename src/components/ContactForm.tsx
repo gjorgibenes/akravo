@@ -100,7 +100,7 @@ export default function ContactForm() {
             Let&apos;s{" "}
             <span
               style={{
-                fontFamily: "'Instrument Serif', serif",
+                fontFamily: "var(--font-serif)",
                 fontStyle: "italic",
                 fontWeight: 400,
               }}
