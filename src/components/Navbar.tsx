@@ -1,21 +1,26 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navLinks = [
-  { label: "LLM Optimisation", href: "/#llm-optimisation-agency" },
-  { label: "Process", href: "/#process" },
-  { label: "Pricing", href: "/#pricing" },
-];
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const CAL_LINK = "https://cal.com/fabianvantil/akravo-discovery";
 
 export default function Navbar() {
+  const t = useTranslations("Navbar");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const navLinks: { label: string; href: string; isRoute?: boolean }[] = [
+    { label: t("llmOptimisation"), href: "/#llm-optimisation-agency" },
+    { label: t("process"), href: "/#process" },
+    { label: t("pricing"), href: "/#pricing" },
+    { label: t("blog"), href: "/blog", isRoute: true },
+    { label: t("caseStudies"), href: "/case-studies", isRoute: true },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -58,34 +63,58 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center" style={{ gap: 32 }}>
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="transition-colors duration-200 flex items-center"
-                style={{
-                  color: "#fbfafc",
-                  fontFamily: "Satoshi, sans-serif",
-                  fontWeight: 500,
-                  fontSize: 16,
-                  letterSpacing: "-0.02em",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.opacity = "0.7";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.opacity = "1";
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.isRoute ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="transition-colors duration-200 flex items-center"
+                  style={{
+                    color: "#fbfafc",
+                    fontFamily: "Satoshi, sans-serif",
+                    fontWeight: 500,
+                    fontSize: 16,
+                    letterSpacing: "-0.02em",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "0.7";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="transition-colors duration-200 flex items-center"
+                  style={{
+                    color: "#fbfafc",
+                    fontFamily: "Satoshi, sans-serif",
+                    fontWeight: 500,
+                    fontSize: 16,
+                    letterSpacing: "-0.02em",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "0.7";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                  }}
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
         </div>
 
         {/* Desktop CTAs */}
         <div className="hidden md:flex items-center" style={{ gap: 8 }}>
-          <Link
+          <LanguageSwitcher />
+          <a
             href="/#contact"
             className="rounded-full transition-all duration-200"
             style={{
@@ -100,8 +129,8 @@ export default function Navbar() {
               borderRadius: 999,
             }}
           >
-            Contact
-          </Link>
+            {t("contact")}
+          </a>
           <a
             href={CAL_LINK}
             className="rounded-full text-white transition-all duration-200"
@@ -115,7 +144,7 @@ export default function Navbar() {
               borderRadius: 999,
             }}
           >
-            Book a call
+            {t("bookCall")}
           </a>
         </div>
 
@@ -123,7 +152,7 @@ export default function Navbar() {
         <button
           className="md:hidden p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
           aria-expanded={mobileOpen}
         >
           <svg
@@ -165,21 +194,40 @@ export default function Navbar() {
               borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
             }}
           >
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="text-base py-2"
-                style={{
-                  color: "#999",
-                  fontFamily: "Satoshi, sans-serif",
-                  fontWeight: 500,
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.isRoute ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-base py-2"
+                  style={{
+                    color: "#999",
+                    fontFamily: "Satoshi, sans-serif",
+                    fontWeight: 500,
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-base py-2"
+                  style={{
+                    color: "#999",
+                    fontFamily: "Satoshi, sans-serif",
+                    fontWeight: 500,
+                  }}
+                >
+                  {link.label}
+                </a>
+              )
+            )}
+            <div className="py-2">
+              <LanguageSwitcher />
+            </div>
             <hr style={{ borderColor: "rgba(255,255,255,0.1)" }} />
             <a
               href={CAL_LINK}
@@ -192,7 +240,7 @@ export default function Navbar() {
                 borderRadius: 999,
               }}
             >
-              Book a call
+              {t("bookCall")}
             </a>
           </motion.div>
         )}
