@@ -90,7 +90,15 @@
     "headingPart2": "GRATIS (27 stappen)",
     "description": "AI Shopping herdefinieert e-commerce. Klanten kunnen hun checkout nu direct binnen ChatGPT voltooien. Download de checklist om te leren hoe u dit voor uw merk activeert.",
     "getChecklist": "Checklist ontvangen",
-    "bookCall": "Gesprek boeken"
+    "bookCall": "Gesprek boeken",
+    "formName": "Naam",
+    "formEmail": "E-mail",
+    "formPhone": "Telefoon",
+    "formWebsite": "Website-URL",
+    "formSending": "Verzenden...",
+    "formThankYou": "Controleer uw inbox!",
+    "formThankYouMessage": "We hebben de checklist zojuist naar uw e-mail gestuurd.",
+    "formError": "Er is iets misgegaan. Probeer het opnieuw."
   },
   "FAQ": {
     "q1": "Is AI SEO gewoon hergebruikte SEO?",

@@ -90,7 +90,15 @@
     "headingPart2": "GRATUITEMENT (27 étapes)",
     "description": "Le shopping par IA redéfinit le e-commerce. Les clients peuvent désormais compléter leur achat directement dans ChatGPT. Téléchargez la checklist pour apprendre comment activer cela pour votre marque.",
     "getChecklist": "Obtenir la Checklist",
-    "bookCall": "Réserver un appel"
+    "bookCall": "Réserver un appel",
+    "formName": "Nom",
+    "formEmail": "E-mail",
+    "formPhone": "Telephone",
+    "formWebsite": "URL du site web",
+    "formSending": "Envoi en cours...",
+    "formThankYou": "Verifiez votre boite mail !",
+    "formThankYouMessage": "Nous venons d'envoyer la checklist a votre adresse e-mail.",
+    "formError": "Une erreur s'est produite. Veuillez reessayer."
   },
   "FAQ": {
     "q1": "Le SEO IA est-il juste du SEO reconditionné ?",

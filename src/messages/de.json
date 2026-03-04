@@ -90,7 +90,15 @@
     "headingPart2": "GRATIS (27 Schritte)",
     "description": "KI-Shopping definiert E-Commerce neu. Kunden können ihren Checkout jetzt direkt in ChatGPT abschließen. Laden Sie die Checkliste herunter und erfahren Sie, wie Sie dies für Ihre Marke aktivieren.",
     "getChecklist": "Checkliste erhalten",
-    "bookCall": "Gespräch buchen"
+    "bookCall": "Gespräch buchen",
+    "formName": "Name",
+    "formEmail": "E-Mail",
+    "formPhone": "Telefon",
+    "formWebsite": "Website-URL",
+    "formSending": "Wird gesendet...",
+    "formThankYou": "Prüfen Sie Ihren Posteingang!",
+    "formThankYouMessage": "Wir haben die Checkliste gerade an Ihre E-Mail gesendet.",
+    "formError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
   },
   "FAQ": {
     "q1": "Ist AI SEO nur umverpacktes SEO?",

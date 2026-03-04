@@ -90,7 +90,15 @@
     "headingPart2": "for FREE (27 steps)",
     "description": "AI Shopping is redefining eCommerce. Customers can now complete their checkout directly inside ChatGPT. Download the checklist to learn how to activate this for your brand.",
     "getChecklist": "Get Checklist",
-    "bookCall": "Book Call"
+    "bookCall": "Book Call",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formWebsite": "Website URL",
+    "formSending": "Sending...",
+    "formThankYou": "Check your inbox!",
+    "formThankYouMessage": "We just sent the checklist to your email.",
+    "formError": "Something went wrong. Please try again."
   },
   "FAQ": {
     "q1": "Is AI SEO just repackaged SEO?",

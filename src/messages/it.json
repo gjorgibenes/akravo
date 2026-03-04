@@ -90,7 +90,15 @@
     "headingPart2": "GRATIS (27 passaggi)",
     "description": "Lo shopping con IA sta ridefinendo l'eCommerce. I clienti possono ora completare il checkout direttamente in ChatGPT. Scarica la checklist per scoprire come attivare questo per il tuo brand.",
     "getChecklist": "Ottieni la Checklist",
-    "bookCall": "Prenota una chiamata"
+    "bookCall": "Prenota una chiamata",
+    "formName": "Nome",
+    "formEmail": "Email",
+    "formPhone": "Telefono",
+    "formWebsite": "URL del sito web",
+    "formSending": "Invio in corso...",
+    "formThankYou": "Controlla la tua casella di posta!",
+    "formThankYouMessage": "Abbiamo appena inviato la checklist alla tua email.",
+    "formError": "Qualcosa e andato storto. Per favore riprova."
   },
   "FAQ": {
     "q1": "L'AI SEO è solo SEO riconfezionato?",
