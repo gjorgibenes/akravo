@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,6 +9,7 @@ import Button from "@/components/Button";
 import MetricCard from "@/components/CaseStudy/MetricCard";
 import Timeline from "@/components/CaseStudy/Timeline";
 import PlatformBreakdown from "@/components/CaseStudy/PlatformBreakdown";
+import { buildBreadcrumbSchema } from "@/lib/schema";
 
 const CAL_LINK = "https://cal.com/fabianvantil/akravo-discovery";
 
@@ -21,6 +22,13 @@ const fadeUp = {
 
 export default function WellnessBrandCaseStudy() {
   const t = useTranslations("CaseStudyWellness");
+  const locale = useLocale();
+
+  const breadcrumb = buildBreadcrumbSchema([
+    { name: "Akravo", url: "https://akravo.com" },
+    { name: t("heroTag"), url: `https://akravo.com/${locale}/case-studies` },
+    { name: t("heroTitle"), url: `https://akravo.com/${locale}/case-studies/wellness-brand` },
+  ]);
 
   const phases = [
     {
@@ -52,6 +60,10 @@ export default function WellnessBrandCaseStudy() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <Navbar />
       <main
         role="main"

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "@/i18n/navigation";
+import { buildBreadcrumbSchema } from "@/lib/schema";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -133,8 +134,17 @@ export default async function CaseStudiesPage({ params }: Props) {
   setRequestLocale(locale);
   const loc = locale as Locale;
 
+  const breadcrumb = buildBreadcrumbSchema([
+    { name: "Akravo", url: "https://akravo.com" },
+    { name: pageHeadings[loc], url: `https://akravo.com/${loc}/case-studies` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <Navbar />
       <main
         role="main"
