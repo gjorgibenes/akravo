@@ -2,46 +2,43 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Badge from "./Badge";
 import Button from "./Button";
 
 const CAL_LINK = "https://cal.com/fabianvantil/akravo-discovery";
 
-const standardFeatures = [
-  "Dedicated AI Strategist",
-  "Advanced entity mapping",
-  "Transparant Performance Dashboard",
-  "Competitive displacement tactics",
-  "Cross-platform citation monitoring",
-  "Technical implementation support",
-  "Direct Slack channel",
-  "Pause or cancel anytime",
-];
-
-const enterpriseFeatures = [
-  "Everything from our standard plan",
-  "API access to citation data",
-  "Multi-domain optimization",
-  "Custom integration options",
-  "Unlimited brands",
-  "Invite unlimited users",
-];
-
 function StarFourIcon() {
   return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 256 256"
-      fill="#fbfafc"
-    >
+    <svg width="20" height="20" viewBox="0 0 256 256" fill="#fbfafc">
       <path d="M229.5,113,166.07,89.93,143,26.5a15.93,15.93,0,0,0-30,0L89.93,89.93,26.5,113a15.93,15.93,0,0,0,0,30l63.43,23.07L113,229.5a15.93,15.93,0,0,0,30,0l23.07-63.43L229.5,143a15.93,15.93,0,0,0,0-30Z" />
     </svg>
   );
 }
 
 export default function Pricing() {
+  const t = useTranslations("Pricing");
   const [upfront, setUpfront] = useState(false);
+
+  const standardFeatures = [
+    t("standardFeature1"),
+    t("standardFeature2"),
+    t("standardFeature3"),
+    t("standardFeature4"),
+    t("standardFeature5"),
+    t("standardFeature6"),
+    t("standardFeature7"),
+    t("standardFeature8"),
+  ];
+
+  const enterpriseFeatures = [
+    t("enterpriseFeature1"),
+    t("enterpriseFeature2"),
+    t("enterpriseFeature3"),
+    t("enterpriseFeature4"),
+    t("enterpriseFeature5"),
+    t("enterpriseFeature6"),
+  ];
 
   return (
     <section
@@ -51,20 +48,14 @@ export default function Pricing() {
         background: "rgb(10, 10, 10)",
       }}
     >
-      <div
-        className="max-w-[1200px] mx-auto"
-        style={{ borderRadius: 50 }}
-      >
-        <div
-          className="flex flex-col items-center"
-          style={{ gap: 64 }}
-        >
+      <div className="max-w-[1200px] mx-auto" style={{ borderRadius: 50 }}>
+        <div className="flex flex-col items-center" style={{ gap: 64 }}>
           {/* Header */}
           <div
             className="flex flex-col items-center text-center"
             style={{ gap: 8 }}
           >
-            <Badge>Pricing</Badge>
+            <Badge>{t("badge")}</Badge>
             <div
               className="flex flex-col items-center text-center"
               style={{ gap: 16 }}
@@ -79,7 +70,7 @@ export default function Pricing() {
                   color: "#fbfafc",
                 }}
               >
-                Pricing that&apos;s{" "}
+                {t("headingRegular")}{" "}
                 <span
                   style={{
                     fontFamily: "var(--font-serif)",
@@ -87,7 +78,7 @@ export default function Pricing() {
                     fontWeight: 400,
                   }}
                 >
-                  just simple.
+                  {t("headingItalic")}
                 </span>
               </h2>
               <p
@@ -102,7 +93,7 @@ export default function Pricing() {
                   textWrap: "balance",
                 }}
               >
-                There is no need to overcomplicate pricing, ever.
+                {t("description")}
               </p>
             </div>
           </div>
@@ -125,7 +116,6 @@ export default function Pricing() {
                 borderTop: "1px solid rgba(255, 255, 255, 0.1)",
               }}
             >
-              {/* Video background glow */}
               <video
                 autoPlay
                 loop
@@ -152,9 +142,8 @@ export default function Pricing() {
                 className="relative z-[1] flex flex-col"
                 style={{ gap: 40 }}
               >
-                {/* Top */}
                 <div className="flex flex-col" style={{ gap: 12 }}>
-                  <Badge green>3 spots left</Badge>
+                  <Badge green>{t("spotsLeft")}</Badge>
                   <div className="flex flex-col">
                     <span
                       style={{
@@ -166,7 +155,7 @@ export default function Pricing() {
                         color: "#999",
                       }}
                     >
-                      Starting at
+                      {t("startingAt")}
                     </span>
                     <div
                       className="flex items-baseline"
@@ -193,7 +182,7 @@ export default function Pricing() {
                           color: "#fbfafc",
                         }}
                       >
-                        {upfront ? "" : "/ month"}
+                        {upfront ? "" : t("perMonth")}
                       </span>
                     </div>
                   </div>
@@ -207,17 +196,18 @@ export default function Pricing() {
                       color: "#999",
                     }}
                   >
-                    3 Month-Project. Pricing may be adjusted to suit your
-                    business&apos; needs. Excluding Link Budgets.
+                    {t("pricingNote")}
                   </span>
                 </div>
 
-                {/* Buttons + Toggle */}
                 <div
                   className="flex flex-col items-center"
                   style={{ gap: 24 }}
                 >
-                  <div className="flex flex-col md:flex-row w-full" style={{ gap: 16 }}>
+                  <div
+                    className="flex flex-col md:flex-row w-full"
+                    style={{ gap: 16 }}
+                  >
                     <Button
                       href={CAL_LINK}
                       variant="primary"
@@ -225,7 +215,7 @@ export default function Pricing() {
                       fullWidth
                       newTab
                     >
-                      Book Call
+                      {t("bookCall")}
                     </Button>
                     <Button
                       href="/#contact"
@@ -233,11 +223,10 @@ export default function Pricing() {
                       size="large"
                       fullWidth
                     >
-                      Submit Form
+                      {t("submitForm")}
                     </Button>
                   </div>
 
-                  {/* Upfront toggle bar */}
                   <div
                     className="flex items-center justify-between w-full"
                     style={{
@@ -249,7 +238,9 @@ export default function Pricing() {
                   >
                     <button
                       onClick={() => setUpfront(!upfront)}
-                      aria-label={upfront ? "Switch to monthly payment" : "Switch to upfront payment"}
+                      aria-label={
+                        upfront ? t("switchToMonthly") : t("switchToUpfront")
+                      }
                       role="switch"
                       aria-checked={upfront}
                       className="relative shrink-0 cursor-pointer"
@@ -283,13 +274,12 @@ export default function Pricing() {
                         color: "#fbfafc",
                       }}
                     >
-                      Upfront Payment
+                      {t("upfrontPayment")}
                     </span>
-                    <Badge>Save 10%</Badge>
+                    <Badge>{t("save10")}</Badge>
                   </div>
                 </div>
 
-                {/* Features */}
                 <div className="flex flex-col" style={{ gap: 16 }}>
                   {standardFeatures.map((f, i) => (
                     <div
@@ -333,7 +323,6 @@ export default function Pricing() {
                 borderTop: "1px solid rgba(255, 255, 255, 0.1)",
               }}
             >
-              {/* Video background glow */}
               <video
                 autoPlay
                 loop
@@ -360,7 +349,6 @@ export default function Pricing() {
                 className="relative z-[1] flex flex-col"
                 style={{ gap: 40 }}
               >
-                {/* Top */}
                 <div className="flex flex-col" style={{ gap: 12 }}>
                   <span
                     style={{
@@ -372,7 +360,7 @@ export default function Pricing() {
                       color: "#fbfafc",
                     }}
                   >
-                    For Enterprises
+                    {t("forEnterprises")}
                   </span>
                   <span
                     style={{
@@ -384,8 +372,7 @@ export default function Pricing() {
                       color: "#999",
                     }}
                   >
-                    3 Month-Project. Pricing may be adjusted to suit your
-                    business&apos; needs. Excluding Link Budgets.
+                    {t("pricingNote")}
                   </span>
                   <div className="flex flex-col">
                     <span
@@ -398,7 +385,7 @@ export default function Pricing() {
                         color: "#999",
                       }}
                     >
-                      Starting at
+                      {t("startingAt")}
                     </span>
                     <div
                       className="flex items-baseline"
@@ -431,7 +418,6 @@ export default function Pricing() {
                   </div>
                 </div>
 
-                {/* Button */}
                 <Button
                   href={CAL_LINK}
                   variant="primary"
@@ -439,10 +425,9 @@ export default function Pricing() {
                   fullWidth
                   newTab
                 >
-                  Let&apos;s Talk
+                  {t("letsTalk")}
                 </Button>
 
-                {/* Features */}
                 <div className="flex flex-col" style={{ gap: 16 }}>
                   {enterpriseFeatures.map((f, i) => (
                     <div

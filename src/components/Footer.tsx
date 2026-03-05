@@ -1,13 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Badge from "./Badge";
 import Button from "./Button";
 
 const CAL_LINK = "https://cal.com/fabianvantil/akravo-discovery";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <>
       {/* Fixed footer that reveals as content scrolls away */}
@@ -44,7 +47,7 @@ export default function Footer() {
             className="max-w-[1200px] mx-auto flex flex-col items-center justify-center flex-1"
             style={{ gap: 32, paddingTop: 40 }}
           >
-            <Badge green>Accepting 3 new clients for Q4</Badge>
+            <Badge green>{t("badge")}</Badge>
 
             <h2
               style={{
@@ -56,7 +59,7 @@ export default function Footer() {
                 color: "#fbfafc",
               }}
             >
-              Do you want to{" "}
+              {t("headingRegular")}{" "}
               <span
                 style={{
                   fontFamily: "var(--font-serif)",
@@ -64,7 +67,7 @@ export default function Footer() {
                   fontWeight: 400,
                 }}
               >
-                Beat Your Competitors?
+                {t("headingItalic")}
               </span>
             </h2>
 
@@ -79,12 +82,11 @@ export default function Footer() {
                 maxWidth: 600,
               }}
             >
-              Every week you wait, your competitors build stronger AI authority
-              that becomes exponentially harder to overcome.
+              {t("description")}
             </p>
 
             <Button href={CAL_LINK} variant="primary" size="large">
-              Book a call
+              {t("bookCall")}
             </Button>
           </div>
 
@@ -95,9 +97,7 @@ export default function Footer() {
               zIndex: 1,
             }}
           >
-            <div
-              className="max-w-[1200px] mx-auto flex flex-col md:flex-row flex-wrap items-center justify-between gap-4"
-            >
+            <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row flex-wrap items-center justify-between gap-4">
               <span
                 style={{
                   fontFamily: "Satoshi, sans-serif",
@@ -108,7 +108,7 @@ export default function Footer() {
                   color: "#999",
                 }}
               >
-                Copyright 2025 Akravo. All rights reserved.
+                {t("copyright")}
               </span>
               <Link href="/">
                 <Image
@@ -127,7 +127,8 @@ export default function Footer() {
           className="absolute bottom-0 left-0 right-0"
           style={{
             height: "26%",
-            background: "linear-gradient(to bottom, transparent, rgb(10,10,10))",
+            background:
+              "linear-gradient(to bottom, transparent, rgb(10,10,10))",
             zIndex: 0,
           }}
         />

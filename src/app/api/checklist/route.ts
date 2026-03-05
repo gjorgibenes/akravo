@@ -27,14 +27,26 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: "Invalid email address" },
+        { status: 400 }
+      );
+    }
+
     // Save lead to Supabase
     const supabase = getSupabase();
-    await supabase.from("checklist_leads").insert({
+    const { error: dbError } = await supabase.from("checklist_leads").insert({
       name,
       email,
       phone: phone || null,
       website: website || null,
     });
+
+    if (dbError) {
+      console.error("Supabase insert error:", dbError);
+    }
 
     // Send email with checklist
     const resend = getResend();

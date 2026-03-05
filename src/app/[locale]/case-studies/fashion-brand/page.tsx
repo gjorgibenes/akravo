@@ -26,7 +26,7 @@ export default function FashionBrandCaseStudy() {
 
   const breadcrumb = buildBreadcrumbSchema([
     { name: "Akravo", url: "https://akravo.com" },
-    { name: t("heroTag"), url: `https://akravo.com/${locale}/case-studies` },
+    { name: t("badge"), url: `https://akravo.com/${locale}/case-studies` },
     { name: t("heroTitle"), url: `https://akravo.com/${locale}/case-studies/fashion-brand` },
   ]);
 

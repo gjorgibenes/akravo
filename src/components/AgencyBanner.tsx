@@ -1,9 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function AgencyBanner() {
+  const t = useTranslations("AgencyBanner");
+
   return (
     <section
       id="llm-optimisation-agency"
@@ -12,9 +15,7 @@ export default function AgencyBanner() {
         background: "rgb(10, 10, 10)",
       }}
     >
-      <div
-        className="max-w-[1200px] mx-auto overflow-hidden relative flex items-center justify-center h-auto md:h-[603px] py-16 md:py-0 rounded-3xl md:rounded-[48px]"
-      >
+      <div className="max-w-[1200px] mx-auto overflow-hidden relative flex items-center justify-center h-auto md:h-[603px] py-16 md:py-0 rounded-3xl md:rounded-[48px]">
         {/* Background Video */}
         <video
           autoPlay
@@ -54,8 +55,10 @@ export default function AgencyBanner() {
               letterSpacing: "-0.02em",
             }}
           >
-            LLM Optimisation{" "}
-            <span style={{ color: "rgba(255, 255, 255, 0.45)" }}>Agency</span>
+            {t("llmOptimisation")}{" "}
+            <span style={{ color: "rgba(255, 255, 255, 0.45)" }}>
+              {t("agency")}
+            </span>
           </p>
         </div>
       </div>

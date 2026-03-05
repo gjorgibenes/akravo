@@ -1,7 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { blogPosts, getBlogPost } from "@/lib/blog";
-import { locales } from "@/i18n/config";
+import { locales, hreflangEntries, getLocalePath } from "@/i18n/config";
 import type { Locale } from "@/i18n/config";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
@@ -29,9 +29,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(loc, slug);
   if (!post) return {};
 
+  const canonicalUrl = `https://akravo.com${getLocalePath(loc)}/blog/${post.slug[loc]}`;
+  const languages: Record<string, string> = {};
+  for (const entry of hreflangEntries) {
+    const entryLoc = entry.locale as Locale;
+    languages[entry.hreflang] = `https://akravo.com${getLocalePath(entryLoc)}/blog/${post.slug[entryLoc]}`;
+  }
+
   return {
     title: `${post.title[loc]} | Akravo`,
     description: post.description[loc],
+    alternates: {
+      canonical: canonicalUrl,
+      languages,
+    },
     openGraph: {
       title: post.title[loc],
       description: post.description[loc],
@@ -85,17 +96,43 @@ export default async function BlogPostPage({ params }: Props) {
     nl: "Gesprek boeken",
   };
 
+  const blogUrl = `https://akravo.com${getLocalePath(loc)}/blog`;
+  const postUrl = `https://akravo.com${getLocalePath(loc)}/blog/${post.slug[loc]}`;
+
   const breadcrumb = buildBreadcrumbSchema([
     { name: "Akravo", url: "https://akravo.com" },
-    { name: "Blog", url: `https://akravo.com/${loc}/blog` },
-    { name: post.title[loc], url: `https://akravo.com/${loc}/blog/${post.slug[loc]}` },
+    { name: "Blog", url: blogUrl },
+    { name: post.title[loc], url: postUrl },
   ]);
+
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title[loc],
+    description: post.description[loc],
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: "Fabian van Til",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Akravo",
+      url: "https://akravo.com",
+    },
+    mainEntityOfPage: postUrl,
+    inLanguage: loc,
+  };
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
       />
       <Navbar />
       <main

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -12,8 +12,6 @@ const CAL_LINK = "https://cal.com/fabianvantil/akravo-discovery";
 export default function Navbar() {
   const t = useTranslations("Navbar");
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
   const navLinks: { label: string; href: string; isRoute?: boolean }[] = [
     { label: t("llmOptimisation"), href: "/#llm-optimisation-agency" },
     { label: t("process"), href: "/#process" },
@@ -21,12 +19,6 @@ export default function Navbar() {
     { label: t("blog"), href: "/blog", isRoute: true },
     { label: t("caseStudies"), href: "/case-studies", isRoute: true },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <header

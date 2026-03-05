@@ -40,8 +40,8 @@
     "promptResearchDesc": "Inizialmente, mappiamo la tua tassonomia degli intenti e identifichiamo le lacune delle entità.",
     "citationManagementTitle": "Gestione Citazioni",
     "citationManagementDesc": "Costruiamo e manteniamo un grafo delle citazioni, dalla A alla Z.",
-    "influencialMonetisationTitle": "Monetizzazione Influente",
-    "influencialMonetisationDesc": "Monitoriamo la tua quota di risposte e la tua quota di citazioni e rileviamo le allucinazioni.",
+    "influentialMonetisationTitle": "Monetizzazione Influente",
+    "influentialMonetisationDesc": "Monitoriamo la tua quota di risposte e la tua quota di citazioni e rileviamo le allucinazioni.",
     "bookCall": "Prenota una chiamata di 20 min"
   },
   "Founder": {
@@ -135,7 +135,7 @@
     "headingItalic": "battere i tuoi concorrenti?",
     "description": "Ogni settimana che aspetti, i tuoi concorrenti costruiscono un'autorità AI SEO più forte che diventa esponenzialmente più difficile da superare.",
     "bookCall": "Prenota una chiamata",
-    "copyright": "Copyright 2025 Akravo. Tutti i diritti riservati."
+    "copyright": "Copyright 2026 Akravo. Tutti i diritti riservati."
   },
   "NotFound": {
     "badge": "Pagina non trovata",
@@ -152,7 +152,7 @@
     "enterprisePlanDescription": "Ottimizzazione LLM Enterprise a partire da $8.000+ incluso accesso API ai dati delle citazioni, ottimizzazione multi-dominio e opzioni di integrazione personalizzate.",
     "promptResearchDescription": "Mappiamo la tua tassonomia degli intenti e identifichiamo le lacune delle entità per capire come le piattaforme IA percepiscono il tuo brand.",
     "citationManagementDescription": "Costruiamo e manteniamo il tuo grafo delle citazioni, assicurandoci che il tuo brand sia referenziato nelle fonti affidabili da cui i LLM dipendono.",
-    "influencialMonetisationDescription": "Monitoriamo la tua quota di risposte e la tua quota di citazioni sulle piattaforme IA e rileviamo le allucinazioni."
+    "influentialMonetisationDescription": "Monitoriamo la tua quota di risposte e la tua quota di citazioni sulle piattaforme IA e rileviamo le allucinazioni."
   },
   "LanguageSwitcher": {
     "label": "Lingua"

@@ -40,8 +40,8 @@
     "promptResearchDesc": "Eerst brengen we uw intentietaxonomie in kaart en identificeren we entiteitslacunes.",
     "citationManagementTitle": "Citatiemanagement",
     "citationManagementDesc": "We bouwen en onderhouden een citatiegraaf, het volledige A-Z.",
-    "influencialMonetisationTitle": "Influentiële Monetisatie",
-    "influencialMonetisationDesc": "We monitoren uw antwoordaandeel en citatieaandeel en detecteren hallucinaties.",
+    "influentialMonetisationTitle": "Influentiële Monetisatie",
+    "influentialMonetisationDesc": "We monitoren uw antwoordaandeel en citatieaandeel en detecteren hallucinaties.",
     "bookCall": "Boek een gesprek van 20 min"
   },
   "Founder": {
@@ -135,7 +135,7 @@
     "headingItalic": "concurrenten verslaan?",
     "description": "Elke week die u wacht, bouwen uw concurrenten een sterkere AI SEO autoriteit op die exponentieel moeilijker te overwinnen wordt.",
     "bookCall": "Gesprek boeken",
-    "copyright": "Copyright 2025 Akravo. Alle rechten voorbehouden."
+    "copyright": "Copyright 2026 Akravo. Alle rechten voorbehouden."
   },
   "NotFound": {
     "badge": "Pagina niet gevonden",
@@ -152,7 +152,7 @@
     "enterprisePlanDescription": "Enterprise LLM-optimalisatie vanaf $8.000+ inclusief API-toegang tot citatiegegevens, multi-domein optimalisatie en aangepaste integratieopties.",
     "promptResearchDescription": "Wij brengen uw intentietaxonomie in kaart en identificeren entiteitslacunes om te begrijpen hoe AI-platforms uw merk waarnemen.",
     "citationManagementDescription": "Wij bouwen en onderhouden uw citatiegraaf, zodat uw merk wordt gerefereerd in betrouwbare bronnen waar LLM's op vertrouwen.",
-    "influencialMonetisationDescription": "Wij monitoren uw antwoordaandeel en citatieaandeel op AI-platforms en detecteren hallucinaties."
+    "influentialMonetisationDescription": "Wij monitoren uw antwoordaandeel en citatieaandeel op AI-platforms en detecteren hallucinaties."
   },
   "LanguageSwitcher": {
     "label": "Taal"

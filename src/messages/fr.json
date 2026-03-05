@@ -40,8 +40,8 @@
     "promptResearchDesc": "D'abord, nous cartographions votre taxonomie d'intentions et identifions les lacunes d'entités.",
     "citationManagementTitle": "Gestion des Citations",
     "citationManagementDesc": "Nous construisons et maintenons un graphe de citations, de A à Z.",
-    "influencialMonetisationTitle": "Monétisation Influente",
-    "influencialMonetisationDesc": "Nous surveillons votre part de réponses et votre part de citations et détectons les hallucinations.",
+    "influentialMonetisationTitle": "Monétisation Influente",
+    "influentialMonetisationDesc": "Nous surveillons votre part de réponses et votre part de citations et détectons les hallucinations.",
     "bookCall": "Réserver un appel de 20 min"
   },
   "Founder": {
@@ -135,7 +135,7 @@
     "headingItalic": "battre vos concurrents ?",
     "description": "Chaque semaine que vous attendez, vos concurrents renforcent leur autorité SEO IA, ce qui devient exponentiellement plus difficile à surmonter.",
     "bookCall": "Réserver un appel",
-    "copyright": "Copyright 2025 Akravo. Tous droits réservés."
+    "copyright": "Copyright 2026 Akravo. Tous droits réservés."
   },
   "NotFound": {
     "badge": "Page non trouvée",
@@ -152,7 +152,7 @@
     "enterprisePlanDescription": "Optimisation LLM Entreprise à partir de $8 000+ incluant l'accès API aux données de citation, l'optimisation multi-domaines et les options d'intégration personnalisées.",
     "promptResearchDescription": "Nous cartographions votre taxonomie d'intentions et identifions les lacunes d'entités pour comprendre comment les plateformes d'IA perçoivent votre marque.",
     "citationManagementDescription": "Nous construisons et maintenons votre graphe de citations, en veillant à ce que votre marque soit référencée dans les sources de confiance utilisées par les LLM.",
-    "influencialMonetisationDescription": "Nous surveillons votre part de réponses et votre part de citations sur les plateformes d'IA et détectons les hallucinations."
+    "influentialMonetisationDescription": "Nous surveillons votre part de réponses et votre part de citations sur les plateformes d'IA et détectons les hallucinations."
   },
   "LanguageSwitcher": {
     "label": "Langue"

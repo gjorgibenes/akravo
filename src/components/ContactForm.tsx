@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { supabase } from "@/lib/supabase";
 import Button from "./Button";
 
 export default function ContactForm() {
+  const t = useTranslations("ContactForm");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -48,7 +50,7 @@ export default function ContactForm() {
     setLoading(true);
     setError("");
 
-    const { error } = await supabase.from("contacts").insert({
+    const { error: dbError } = await supabase.from("contacts").insert({
       first_name: formData.firstName,
       last_name: formData.lastName,
       email: formData.email,
@@ -58,8 +60,8 @@ export default function ContactForm() {
 
     setLoading(false);
 
-    if (error) {
-      setError("Something went wrong. Please try again.");
+    if (dbError) {
+      setError(t("error"));
       return;
     }
 
@@ -97,7 +99,7 @@ export default function ContactForm() {
               maxWidth: 483,
             }}
           >
-            Let&apos;s{" "}
+            {t("headingRegular")}{" "}
             <span
               style={{
                 fontFamily: "var(--font-serif)",
@@ -105,7 +107,7 @@ export default function ContactForm() {
                 fontWeight: 400,
               }}
             >
-              connect.
+              {t("headingItalic")}
             </span>
           </h2>
           <p
@@ -120,8 +122,7 @@ export default function ContactForm() {
               textWrap: "balance",
             }}
           >
-            Ready to take the next step? Let&apos;s schedule a call to discuss
-            how we can help your business grow and succeed with AI.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -140,7 +141,7 @@ export default function ContactForm() {
                 marginBottom: 8,
               }}
             >
-              Thank you!
+              {t("thankYou")}
             </p>
             <p
               style={{
@@ -149,7 +150,7 @@ export default function ContactForm() {
                 fontWeight: 500,
               }}
             >
-              We&apos;ll get back to you within 24 hours.
+              {t("thankYouMessage")}
             </p>
           </motion.div>
         ) : (
@@ -158,12 +159,16 @@ export default function ContactForm() {
             className="flex flex-col"
             style={{ gap: 24, maxWidth: 800, zIndex: 4 }}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 16 }}>
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2"
+              style={{ gap: 16 }}
+            >
               <div>
-                <label style={labelStyle}>First Name</label>
+                <label htmlFor="firstName" style={labelStyle}>{t("firstName")}</label>
                 <input
+                  id="firstName"
                   type="text"
-                  placeholder="First Name"
+                  placeholder={t("firstName")}
                   required
                   value={formData.firstName}
                   onChange={(e) =>
@@ -181,10 +186,11 @@ export default function ContactForm() {
                 />
               </div>
               <div>
-                <label style={labelStyle}>Last Name</label>
+                <label htmlFor="lastName" style={labelStyle}>{t("lastName")}</label>
                 <input
+                  id="lastName"
                   type="text"
-                  placeholder="Last Name"
+                  placeholder={t("lastName")}
                   required
                   value={formData.lastName}
                   onChange={(e) =>
@@ -203,10 +209,11 @@ export default function ContactForm() {
               </div>
             </div>
             <div>
-              <label style={labelStyle}>Email</label>
+              <label htmlFor="email" style={labelStyle}>{t("email")}</label>
               <input
+                id="email"
                 type="email"
-                placeholder="Email"
+                placeholder={t("email")}
                 required
                 value={formData.email}
                 onChange={(e) =>
@@ -224,10 +231,11 @@ export default function ContactForm() {
               />
             </div>
             <div>
-              <label style={labelStyle}>Website</label>
+              <label htmlFor="website" style={labelStyle}>{t("website")}</label>
               <input
+                id="website"
                 type="url"
-                placeholder="Website"
+                placeholder={t("website")}
                 value={formData.website}
                 onChange={(e) =>
                   setFormData({ ...formData, website: e.target.value })
@@ -244,9 +252,10 @@ export default function ContactForm() {
               />
             </div>
             <div>
-              <label style={labelStyle}>Tell us about your business?</label>
+              <label htmlFor="message" style={labelStyle}>{t("message")}</label>
               <textarea
-                placeholder="Tell us about your business?"
+                id="message"
+                placeholder={t("message")}
                 rows={4}
                 value={formData.message}
                 onChange={(e) =>
@@ -264,12 +273,18 @@ export default function ContactForm() {
               />
             </div>
             {error && (
-              <p style={{ color: "#ef4444", fontFamily: "Satoshi, sans-serif", fontSize: 14 }}>
+              <p
+                style={{
+                  color: "#ef4444",
+                  fontFamily: "Satoshi, sans-serif",
+                  fontSize: 14,
+                }}
+              >
                 {error}
               </p>
             )}
             <Button type="submit" variant="primary" size="large" fullWidth>
-              {loading ? "Sending..." : "Get in Touch"}
+              {loading ? t("sending") : t("submit")}
             </Button>
           </form>
         )}

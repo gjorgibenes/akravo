@@ -1,7 +1,10 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Badge from "@/components/Badge";
 
 export default function NotFound() {
+  const t = useTranslations("NotFound");
+
   return (
     <main
       className="min-h-screen flex flex-col items-center justify-center text-center"
@@ -14,7 +17,7 @@ export default function NotFound() {
         className="flex flex-col items-center"
         style={{ gap: 32, maxWidth: 725 }}
       >
-        <Badge>Page Not Found</Badge>
+        <Badge>{t("badge")}</Badge>
 
         <div className="flex flex-col items-center" style={{ gap: 24 }}>
           <h1
@@ -28,7 +31,7 @@ export default function NotFound() {
               maxWidth: 725,
             }}
           >
-            Sometimes you need to get lost to find your way.
+            {t("heading")}
           </h1>
           <p
             style={{
@@ -41,7 +44,7 @@ export default function NotFound() {
               textWrap: "balance",
             }}
           >
-            Looks like you ventured too far, let&apos;s go home.
+            {t("description")}
           </p>
         </div>
 
@@ -62,7 +65,7 @@ export default function NotFound() {
             textDecoration: "none",
           }}
         >
-          Go Home
+          {t("goHome")}
         </Link>
       </div>
     </main>

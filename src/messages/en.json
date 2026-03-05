@@ -40,8 +40,8 @@
     "promptResearchDesc": "Initially, we map your intent taxonomy, and identify entity gaps.",
     "citationManagementTitle": "Citation Management",
     "citationManagementDesc": "We build and maintain a citation graph, the whole A-Z.",
-    "influencialMonetisationTitle": "Influential Monetisation",
-    "influencialMonetisationDesc": "We monitor your answer share and citation share and catch hallucinations.",
+    "influentialMonetisationTitle": "Influential Monetisation",
+    "influentialMonetisationDesc": "We monitor your answer share and citation share and catch hallucinations.",
     "bookCall": "Book a 20-min call"
   },
   "Founder": {
@@ -135,7 +135,7 @@
     "headingItalic": "Beat Your Competitors?",
     "description": "Every week you wait, your competitors build stronger AI SEO authority that becomes exponentially harder to overcome.",
     "bookCall": "Book a call",
-    "copyright": "Copyright 2025 Akravo. All rights reserved."
+    "copyright": "Copyright 2026 Akravo. All rights reserved."
   },
   "NotFound": {
     "badge": "Page Not Found",
@@ -152,7 +152,7 @@
     "enterprisePlanDescription": "Enterprise LLM Optimisation starting at $8,000+ including API access to citation data, multi-domain optimization, and custom integration options.",
     "promptResearchDescription": "We map your intent taxonomy and identify entity gaps to understand how AI platforms perceive your brand.",
     "citationManagementDescription": "We build and maintain your citation graph, ensuring your brand is referenced across trusted sources that LLMs rely on.",
-    "influencialMonetisationDescription": "We monitor your answer share and citation share across AI platforms and catch hallucinations."
+    "influentialMonetisationDescription": "We monitor your answer share and citation share across AI platforms and catch hallucinations."
   },
   "LanguageSwitcher": {
     "label": "Language"

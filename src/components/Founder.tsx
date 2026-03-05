@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function Founder() {
+  const t = useTranslations("Founder");
+
   return (
     <section
       className="w-full py-16 px-6 md:px-16"
@@ -20,7 +23,7 @@ export default function Founder() {
           minHeight: 400,
         }}
       >
-        {/* Mobile photo — full width at top of card */}
+        {/* Mobile photo */}
         <div className="relative w-full lg:hidden" style={{ height: 300 }}>
           <Image
             src="/images/fabian.png"
@@ -40,9 +43,7 @@ export default function Founder() {
           />
         </div>
 
-        <div
-          className="flex flex-col lg:flex-row items-start relative py-8 lg:py-16 px-6 md:px-12"
-        >
+        <div className="flex flex-col lg:flex-row items-start relative py-8 lg:py-16 px-6 md:px-12">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -63,7 +64,7 @@ export default function Founder() {
                   color: "#fbfafc",
                 }}
               >
-                Aim, shoot,{" "}
+                {t("headingRegular")}{" "}
                 <span
                   style={{
                     fontFamily: "var(--font-serif)",
@@ -71,7 +72,7 @@ export default function Founder() {
                     fontWeight: 400,
                   }}
                 >
-                  score.
+                  {t("headingItalic")}
                 </span>
               </h2>
 
@@ -85,10 +86,7 @@ export default function Founder() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                ChatGPT just announced the future. Google SGE is already used
-                more than standard Google Results. While others are writing blog
-                posts about &ldquo;AI SEO,&rdquo; we&apos;re inside the API
-                making it work. Our edge: We don&apos;t theorize. We implement.
+                {t("description")}
               </p>
             </div>
 
@@ -103,7 +101,7 @@ export default function Founder() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Fabian van Til
+                {t("name")}
               </span>
               <span
                 style={{
@@ -115,12 +113,12 @@ export default function Founder() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Founder of Akravo
+                {t("role")}
               </span>
             </div>
           </motion.div>
 
-          {/* Founder photo — absolute right, gradient mask on left edge */}
+          {/* Founder photo */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}

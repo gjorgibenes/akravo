@@ -115,7 +115,7 @@ export function buildSchemas(locale: Locale, messages: Messages) {
       "@type": "Service",
       serviceType: "Influential Monetisation",
       provider: { "@type": "Organization", name: "Akravo" },
-      description: t("Schema", "influencialMonetisationDescription"),
+      description: t("Schema", "influentialMonetisationDescription"),
       url,
     },
   ];

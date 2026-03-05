@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Badge from "./Badge";
 import Button from "./Button";
 
@@ -61,34 +62,45 @@ function MonetisationIcon() {
       <line x1="108" y1="144" x2="108" y2="160" />
       <line x1="56" y1="108" x2="72" y2="108" />
       <line x1="144" y1="108" x2="160" y2="108" />
-      <circle cx="188" cy="68" r="36" fill="rgb(98, 20, 217)" stroke="rgb(98, 20, 217)" strokeWidth="0" />
-      <path d="M176 68l8 8 16-16" stroke="#fbfafc" strokeWidth="14" fill="none" />
+      <circle
+        cx="188"
+        cy="68"
+        r="36"
+        fill="rgb(98, 20, 217)"
+        stroke="rgb(98, 20, 217)"
+        strokeWidth="0"
+      />
+      <path
+        d="M176 68l8 8 16-16"
+        stroke="#fbfafc"
+        strokeWidth="14"
+        fill="none"
+      />
     </svg>
   );
 }
 
-const services = [
-  {
-    title: "Prompt Research",
-    description:
-      "Initially, we map your intent taxonomy, and identify entity gaps.",
-    icon: <PromptResearchIcon />,
-  },
-  {
-    title: "Citation Management",
-    description:
-      "We build and maintain a citation graph, the whole A-Z.",
-    icon: <CitationManagementIcon />,
-  },
-  {
-    title: "Influencial Monetisation",
-    description:
-      "We monitor your answer share and citation share and catch hallucinations",
-    icon: <MonetisationIcon />,
-  },
-];
-
 export default function Services() {
+  const t = useTranslations("Services");
+
+  const services = [
+    {
+      title: t("promptResearchTitle"),
+      description: t("promptResearchDesc"),
+      icon: <PromptResearchIcon />,
+    },
+    {
+      title: t("citationManagementTitle"),
+      description: t("citationManagementDesc"),
+      icon: <CitationManagementIcon />,
+    },
+    {
+      title: t("influentialMonetisationTitle"),
+      description: t("influentialMonetisationDesc"),
+      icon: <MonetisationIcon />,
+    },
+  ];
+
   return (
     <section
       id="process"
@@ -104,15 +116,12 @@ export default function Services() {
           borderTop: "1px solid rgba(255, 255, 255, 0.1)",
         }}
       >
-        <div
-          className="flex flex-col items-center"
-          style={{ gap: 64 }}
-        >
+        <div className="flex flex-col items-center" style={{ gap: 64 }}>
           <div
             className="flex flex-col items-center text-center"
             style={{ gap: 24 }}
           >
-            <Badge>What we do</Badge>
+            <Badge>{t("badge")}</Badge>
             <h2
               style={{
                 fontFamily: "Satoshi, sans-serif",
@@ -122,7 +131,7 @@ export default function Services() {
                 color: "#fbfafc",
               }}
             >
-              Simple,{" "}
+              {t("headingRegular")}{" "}
               <span
                 style={{
                   fontFamily: "var(--font-serif)",
@@ -130,7 +139,7 @@ export default function Services() {
                   fontWeight: 400,
                 }}
               >
-                effective.
+                {t("headingItalic")}
               </span>
             </h2>
             <p
@@ -145,8 +154,7 @@ export default function Services() {
                 textWrap: "balance",
               }}
             >
-              Make your brand legible to AI, verifiable on the web, and visible
-              where people ask. in three strategic steps.
+              {t("description")}
             </p>
           </div>
 
@@ -211,7 +219,7 @@ export default function Services() {
           </div>
 
           <Button href={CAL_LINK} variant="primary" size="large">
-            Book a 20-min call
+            {t("bookCall")}
           </Button>
         </div>
       </div>

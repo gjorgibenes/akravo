@@ -5,7 +5,7 @@
 ## About Akravo
 Akravo was founded by Fabian van Til. The agency specializes in making businesses visible and citable in AI-generated responses. While others write blog posts about "AI SEO," Akravo is inside the API making it work. The edge: they don't theorize — they implement.
 
-ChatGPT just announced the future. Google SGE is already used more than standard Google Results. Every week a business waits, competitors build stronger AI authority that becomes exponentially harder to overcome.
+ChatGPT just announced the future. Google AI Overview is already used more than standard Google Results. Every week a business waits, competitors build stronger AI authority that becomes exponentially harder to overcome.
 
 ## Services in Detail
 
@@ -15,7 +15,7 @@ We map your intent taxonomy and identify entity gaps to understand how AI platfo
 ### 2. Citation Management
 We build and maintain your citation graph — the whole A-Z. This involves ensuring your brand is referenced across the trusted sources that large language models rely on during training and retrieval. Citation management includes creating and optimizing content across authoritative platforms, building entity relationships, and maintaining a consistent, accurate presence across the web that AI systems can verify and trust.
 
-### 3. Influencial Monetisation
+### 3. Influential Monetisation
 We monitor your answer share and citation share across AI platforms and catch hallucinations. This ongoing monitoring ensures that AI platforms accurately represent your brand, products, and services. We track how often your brand is cited in AI-generated responses, measure your share of voice compared to competitors, and identify and address any AI hallucinations or inaccuracies about your business.
 
 ## Pricing
@@ -85,7 +85,7 @@ Akravo's approach is summed up as: "Aim, shoot, score." The agency focuses on pr
 ## Key Facts
 - LLM Optimisation Agency
 - Founded by Fabian van Til
-- Services: Prompt Research, Citation Management, Influencial Monetisation
+- Services: Prompt Research, Citation Management, Influential Monetisation
 - Accepts clients worldwide
-- Currently accepting 3 new clients for Q4
+- Currently accepting 3 new clients for new engagements
 - AI platforms covered: ChatGPT, Perplexity, Google AI Overview, Claude, Gemini, Meta AI, Qwen, Mistral

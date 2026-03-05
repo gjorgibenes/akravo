@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { blogPosts } from "@/lib/blog";
+import { hreflangEntries, getLocalePath } from "@/i18n/config";
 import type { Locale } from "@/i18n/config";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
@@ -32,9 +33,20 @@ const blogMetaDescriptions: Record<Locale, string> = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const loc = locale as Locale;
+  const canonicalUrl = `https://akravo.com${getLocalePath(loc)}/blog`;
+  const languages: Record<string, string> = {};
+  for (const entry of hreflangEntries) {
+    const entryLoc = entry.locale as Locale;
+    languages[entry.hreflang] = `https://akravo.com${getLocalePath(entryLoc)}/blog`;
+  }
+
   return {
     title: blogMetaTitles[loc],
     description: blogMetaDescriptions[loc],
+    alternates: {
+      canonical: canonicalUrl,
+      languages,
+    },
   };
 }
 
@@ -63,7 +75,7 @@ export default async function BlogPage({ params }: Props) {
 
   const breadcrumb = buildBreadcrumbSchema([
     { name: "Akravo", url: "https://akravo.com" },
-    { name: "Blog", url: `https://akravo.com/${loc}/blog` },
+    { name: "Blog", url: `https://akravo.com${getLocalePath(loc)}/blog` },
   ]);
 
   return (

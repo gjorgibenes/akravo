@@ -1,3 +1,4 @@
+import { setRequestLocale } from "next-intl/server";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoMarquee from "@/components/LogoMarquee";
@@ -10,11 +11,21 @@ import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <Navbar />
-      <main role="main" style={{ position: "relative", zIndex: 2, overflow: "hidden" }}>
+      <main
+        role="main"
+        style={{ position: "relative", zIndex: 2, overflow: "hidden" }}
+      >
         <Hero />
         <LogoMarquee />
         <AgencyBanner />

@@ -40,8 +40,8 @@
     "promptResearchDesc": "Primero, mapeamos tu taxonomía de intenciones e identificamos las brechas de entidades.",
     "citationManagementTitle": "Gestión de Citas",
     "citationManagementDesc": "Construimos y mantenemos un grafo de citas, de la A a la Z.",
-    "influencialMonetisationTitle": "Monetización Influyente",
-    "influencialMonetisationDesc": "Monitorizamos tu cuota de respuestas y cuota de citas y detectamos alucinaciones.",
+    "influentialMonetisationTitle": "Monetización Influyente",
+    "influentialMonetisationDesc": "Monitorizamos tu cuota de respuestas y cuota de citas y detectamos alucinaciones.",
     "bookCall": "Reservar llamada de 20 min"
   },
   "Founder": {
@@ -135,7 +135,7 @@
     "headingItalic": "superar a tu competencia?",
     "description": "Cada semana que esperas, tus competidores construyen una autoridad de AI SEO más fuerte que se vuelve exponencialmente más difícil de superar.",
     "bookCall": "Reservar llamada",
-    "copyright": "Copyright 2025 Akravo. Todos los derechos reservados."
+    "copyright": "Copyright 2026 Akravo. Todos los derechos reservados."
   },
   "NotFound": {
     "badge": "Página no encontrada",
@@ -152,7 +152,7 @@
     "enterprisePlanDescription": "Optimización LLM Empresarial desde $8.000+ incluyendo acceso API a datos de citas, optimización multidominio y opciones de integración personalizadas.",
     "promptResearchDescription": "Mapeamos tu taxonomía de intenciones e identificamos brechas de entidades para entender cómo las plataformas de IA perciben tu marca.",
     "citationManagementDescription": "Construimos y mantenemos tu grafo de citas, asegurándonos de que tu marca sea referenciada en fuentes de confianza de las que dependen los LLM.",
-    "influencialMonetisationDescription": "Monitorizamos tu cuota de respuestas y cuota de citas en plataformas de IA y detectamos alucinaciones."
+    "influentialMonetisationDescription": "Monitorizamos tu cuota de respuestas y cuota de citas en plataformas de IA y detectamos alucinaciones."
   },
   "LanguageSwitcher": {
     "label": "Idioma"

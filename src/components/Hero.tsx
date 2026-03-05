@@ -1,12 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Badge from "./Badge";
 import Button from "./Button";
 
 const CAL_LINK = "https://cal.com/fabianvantil/akravo-discovery";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   return (
     <section
       className="relative w-full flex flex-col items-center justify-center text-center overflow-visible pt-24 md:pt-[140px] px-6 md:px-16 pb-16"
@@ -21,7 +24,7 @@ export default function Hero() {
         className="flex flex-col items-center w-full"
         style={{ maxWidth: 1200, gap: 32 }}
       >
-        <Badge green>Accepting 3 new clients for Q4</Badge>
+        <Badge green>{t("badge")}</Badge>
 
         <h1
           style={{
@@ -35,7 +38,7 @@ export default function Hero() {
             width: "100%",
           }}
         >
-          Your Business is{" "}
+          {t("headingPart1")}{" "}
           <span
             style={{
               fontFamily: "var(--font-serif)",
@@ -43,9 +46,9 @@ export default function Hero() {
               fontWeight: 400,
             }}
           >
-            Invisible
+            {t("headingItalic")}
           </span>{" "}
-          to 200 Million AI Users.
+          {t("headingPart2")}
         </h1>
 
         <p
@@ -60,18 +63,15 @@ export default function Hero() {
             textWrap: "balance",
           }}
         >
-          ChatGPT, Perplexity, and Google&apos;s AI Overview control the new
-          buyer journey. We make sure they recommend you.
+          {t("description")}
         </p>
 
-        <div
-          className="flex flex-row flex-wrap items-center justify-center gap-4 md:gap-6"
-        >
+        <div className="flex flex-row flex-wrap items-center justify-center gap-4 md:gap-6">
           <Button href={CAL_LINK} variant="primary" size="large">
-            Book a call
+            {t("bookCall")}
           </Button>
           <Button href="/#process" variant="secondary" size="large">
-            Learn How
+            {t("learnHow")}
           </Button>
         </div>
       </motion.div>

@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Home pages for all locales
   const homePages = locales.map((locale) => ({
     url: getCanonicalUrl(locale),
-    lastModified: new Date(),
+    lastModified: new Date("2026-03-04"),
     changeFrequency: "weekly" as const,
     priority: locale === "en" ? 1 : 0.8,
     alternates: {
@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       locale === "en"
         ? "https://akravo.com/blog"
         : `https://akravo.com/${locale}/blog`,
-    lastModified: new Date(),
+    lastModified: new Date("2026-03-04"),
     changeFrequency: "weekly" as const,
     priority: 0.7,
     alternates: {
@@ -59,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         locale === "en"
           ? `https://akravo.com/blog/${post.slug[locale]}`
           : `https://akravo.com/${locale}/blog/${post.slug[locale]}`,
-      lastModified: new Date(),
+      lastModified: new Date("2026-03-04"),
       changeFrequency: "monthly" as const,
       priority: 0.6,
       alternates: {
@@ -109,7 +109,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         locale === "en"
           ? `https://akravo.com/case-studies/${slug}`
           : `https://akravo.com/${locale}/case-studies/${slug}`,
-      lastModified: new Date(),
+      lastModified: new Date("2026-03-04"),
       changeFrequency: "monthly" as const,
       priority: 0.6,
       alternates: {

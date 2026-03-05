@@ -2,42 +2,20 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const faqItems = [
-  {
-    question: "Is this just repackaged SEO?",
-    answer:
-      '70% overlaps with SEO, but the 30% that\'s different makes all the difference. AI platforms need structured data, clear answers, and entity authority - not just keywords and backlinks.',
-  },
-  {
-    question: "Can you guarantee we'll appear in ChatGPT?",
-    answer:
-      'We guarantee increased citations or full refund. ChatGPT doesn\'t "rank" sites - it synthesizes from trusted sources. We make you a trusted source.',
-  },
-  {
-    question: "How long until results?",
-    answer:
-      "First citations within 30 days. Meaningful traffic by day 60. Compound growth after 90 days.",
-  },
-  {
-    question: "What exactly is LLM optimization?",
-    answer:
-      "It's the process of making your content visible and citable in AI-powered search tools like ChatGPT, Perplexity, and Google's AI Overview. Think of it as SEO for AI - we ensure these platforms understand, trust, and recommend your business when users ask relevant questions.",
-  },
-  {
-    question: "Will this interfere with our regular SEO?",
-    answer:
-      'No. In fact, 70% of AI optimization improves your traditional SEO too. Better structured data, clearer content, and improved entity recognition benefit both traditional and AI search. The only additions are AI-specific elements like llms.txt and answer-focused content formatting.',
-  },
-  {
-    question: "How do AI platforms decide what sources to trust?",
-    answer:
-      'They evaluate domain authority, factual accuracy, content structure, and presence across multiple trusted sources (Wikipedia, major publications, etc.). If you\'re cited frequently in their training data or high-authority sites, you become a "trusted source." We systematically build these trust signals.',
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function FAQ() {
+  const t = useTranslations("FAQ");
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqItems = [
+    { question: t("q1"), answer: t("a1") },
+    { question: t("q2"), answer: t("a2") },
+    { question: t("q3"), answer: t("a3") },
+    { question: t("q4"), answer: t("a4") },
+    { question: t("q5"), answer: t("a5") },
+    { question: t("q6"), answer: t("a6") },
+  ];
 
   return (
     <section
@@ -61,6 +39,7 @@ export default function FAQ() {
               }}
             >
               <button
+                id={`faq-question-${i}`}
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 aria-expanded={openIndex === i}
                 aria-controls={`faq-answer-${i}`}
@@ -88,7 +67,6 @@ export default function FAQ() {
                     position: "relative",
                   }}
                 >
-                  {/* Horizontal bar */}
                   <span
                     style={{
                       position: "absolute",
@@ -98,7 +76,6 @@ export default function FAQ() {
                       borderRadius: 8,
                     }}
                   />
-                  {/* Vertical bar */}
                   <span
                     style={{
                       position: "absolute",

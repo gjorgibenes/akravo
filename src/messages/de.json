@@ -40,8 +40,8 @@
     "promptResearchDesc": "Zunächst kartieren wir Ihre Intent-Taxonomie und identifizieren Entity-Lücken.",
     "citationManagementTitle": "Zitationsmanagement",
     "citationManagementDesc": "Wir erstellen und pflegen einen Zitationsgraphen, das komplette A-Z.",
-    "influencialMonetisationTitle": "Einflussreiche Monetarisierung",
-    "influencialMonetisationDesc": "Wir überwachen Ihren Antwortanteil und Zitationsanteil und erkennen Halluzinationen.",
+    "influentialMonetisationTitle": "Einflussreiche Monetarisierung",
+    "influentialMonetisationDesc": "Wir überwachen Ihren Antwortanteil und Zitationsanteil und erkennen Halluzinationen.",
     "bookCall": "20-min Gespräch buchen"
   },
   "Founder": {
@@ -135,7 +135,7 @@
     "headingItalic": "Konkurrenz schlagen?",
     "description": "Jede Woche, die Sie warten, baut Ihre Konkurrenz stärkere AI SEO Autorität auf, die exponentiell schwerer zu überwinden wird.",
     "bookCall": "Gespräch buchen",
-    "copyright": "Copyright 2025 Akravo. Alle Rechte vorbehalten."
+    "copyright": "Copyright 2026 Akravo. Alle Rechte vorbehalten."
   },
   "NotFound": {
     "badge": "Seite nicht gefunden",
@@ -152,7 +152,7 @@
     "enterprisePlanDescription": "Enterprise LLM-Optimierung ab $8.000+ inklusive API-Zugang zu Zitationsdaten, Multi-Domain-Optimierung und individuellen Integrationsoptionen.",
     "promptResearchDescription": "Wir kartieren Ihre Intent-Taxonomie und identifizieren Entity-Lücken, um zu verstehen, wie KI-Plattformen Ihre Marke wahrnehmen.",
     "citationManagementDescription": "Wir erstellen und pflegen Ihren Zitationsgraphen und stellen sicher, dass Ihre Marke in vertrauenswürdigen Quellen referenziert wird, auf die LLMs angewiesen sind.",
-    "influencialMonetisationDescription": "Wir überwachen Ihren Antwortanteil und Zitationsanteil auf KI-Plattformen und erkennen Halluzinationen."
+    "influentialMonetisationDescription": "Wir überwachen Ihren Antwortanteil und Zitationsanteil auf KI-Plattformen und erkennen Halluzinationen."
   },
   "LanguageSwitcher": {
     "label": "Sprache"
